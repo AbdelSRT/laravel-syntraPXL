@@ -12,7 +12,7 @@ class CourseController extends Controller
      */
     public function index()
     {
-        //
+        return view('course.index', ['course' => Course::get()]);
     }
 
     /**
@@ -36,7 +36,7 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-        //
+        return view('course.detail', ['course' => $course]);
     }
 
     /**

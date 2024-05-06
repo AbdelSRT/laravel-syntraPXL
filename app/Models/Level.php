@@ -10,4 +10,9 @@ class Level extends Model
     use HasFactory;
 
     protected $fillable = ['name'];
+
+    public function courses()
+    {
+        return $this->belongsTo(Course::class);
+    }
 }

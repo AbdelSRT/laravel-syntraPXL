@@ -10,4 +10,9 @@ class PriceDetail extends Model
     use HasFactory;
 
     protected $fillable = ['name', 'price_excl', 'price_incl'];
+
+    public function courses()
+    {
+        return $this->belongsTo(Course::class);
+    }
 }

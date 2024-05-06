@@ -10,4 +10,9 @@ class ForWho extends Model
     use HasFactory;
 
     protected $fillable = ['name'];
+
+    public function courses()
+    {
+        return $this->belongsToMany(Course::class);
+    }
 }

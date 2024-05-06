@@ -10,4 +10,10 @@ class Day extends Model
     use HasFactory;
 
     protected $fillable = ['name'];
+
+
+    public function startDate()
+    {
+        return $this->belongsTo(StartDate::class);
+    }
 }
